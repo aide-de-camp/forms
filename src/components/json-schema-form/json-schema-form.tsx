@@ -1,5 +1,5 @@
 import { Component, Prop } from '@stencil/core';
-import { JSONSchema7 } from 'json-schema';
+import { JSONSchema6, JSONSchema7 } from 'json-schema';
 
 @Component({
   tag: 'adc-forms-json-schema',
@@ -8,8 +8,9 @@ import { JSONSchema7 } from 'json-schema';
 export class JsonSchemaForm {
   /**
    * The JSON Schema to build the form and apply validation.
+   * Accepted versions 7 and 6.
    */
-  @Prop() schema: JSONSchema7;
+  @Prop() schema: JSONSchema7 | JSONSchema6;
 
   /**
    * A CSS class (or several of them) to apply to the form.
@@ -42,7 +43,7 @@ export class JsonSchemaForm {
   private get schemaProperties() {
     return Object.entries(this.schema.properties).map(([k, v]) => {
       const name = k;
-      const details = v as JSONSchema7;
+      const details = v as JSONSchema7 | JSONSchema6;
       return {
         ...details,
         name,

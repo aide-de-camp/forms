@@ -9,6 +9,7 @@ import '@stencil/core';
 
 
 import {
+  JSONSchema6,
   JSONSchema7,
 } from 'json-schema';
 
@@ -29,9 +30,9 @@ export namespace Components {
     */
     'reset': string;
     /**
-    * The JSON Schema to build the form and apply validation.
+    * The JSON Schema to build the form and apply validation. Accepted versions 7 and 6.
     */
-    'schema': JSONSchema7;
+    'schema': JSONSchema7 | JSONSchema6;
     /**
     * Label for the "submit" button. Defaults to "Submit"
     */
@@ -51,9 +52,9 @@ export namespace Components {
     */
     'reset'?: string;
     /**
-    * The JSON Schema to build the form and apply validation.
+    * The JSON Schema to build the form and apply validation. Accepted versions 7 and 6.
     */
-    'schema'?: JSONSchema7;
+    'schema'?: JSONSchema7 | JSONSchema6;
     /**
     * Label for the "submit" button. Defaults to "Submit"
     */
