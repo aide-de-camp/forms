@@ -141,7 +141,7 @@ new Vue({
 
 ## Component Catalog
 
-- [adc-forms-json-schema](https://github.com/aide-de-camp/forms/tree/master/src/components/json-schema-forms)
+- [adc-forms-json-schema](https://github.com/aide-de-camp/forms/tree/master/src/components/json-schema-form)
 
 ## Browser support
 
