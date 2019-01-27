@@ -16,21 +16,47 @@ import {
 export namespace Components {
 
   interface AdcFormsJsonSchema {
+    /**
+    * The form action to be performed on submit. The method is always POST.
+    */
     'action': string;
+    /**
+    * A CSS class (or several of them) to apply to the form.
+    */
     'cssClass': string;
     /**
-    * The JSON Schema to build the form and apply validation
+    * Label for the "reset" button. If none is present, the button will not be shown.
+    */
+    'reset': string;
+    /**
+    * The JSON Schema to build the form and apply validation.
     */
     'schema': JSONSchema7;
+    /**
+    * Label for the "submit" button. Defaults to "Submit"
+    */
     'submit': string;
   }
   interface AdcFormsJsonSchemaAttributes extends StencilHTMLAttributes {
+    /**
+    * The form action to be performed on submit. The method is always POST.
+    */
     'action'?: string;
+    /**
+    * A CSS class (or several of them) to apply to the form.
+    */
     'cssClass'?: string;
     /**
-    * The JSON Schema to build the form and apply validation
+    * Label for the "reset" button. If none is present, the button will not be shown.
+    */
+    'reset'?: string;
+    /**
+    * The JSON Schema to build the form and apply validation.
     */
     'schema'?: JSONSchema7;
+    /**
+    * Label for the "submit" button. Defaults to "Submit"
+    */
     'submit'?: string;
   }
 }

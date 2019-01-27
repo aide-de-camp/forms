@@ -13,6 +13,7 @@
     <adc-forms-json-schema
       css-class="my-form"
       submit="Go!"
+      reset="Forget it"
       action="/my-handling-form-page"
     ></adc-forms-json-schema>
     <script>
@@ -23,6 +24,7 @@
         properties: {
           firstName: {
             type: 'string',
+            description: 'First name',
           },
           lastName: {
             type: 'string',
