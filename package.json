@@ -1,7 +1,7 @@
 {
   "name": "@adc/forms",
   "version": "0.0.0-development",
-  "description": "Stencil Component Starter",
+  "description": "A Web Component collection that helps you build and handle forms.",
   "keywords": [
     "stencil",
     "stencil-components",
@@ -33,6 +33,7 @@
   "dependencies": {},
   "devDependencies": {
     "@stencil/core": "~0.16.2",
+    "@types/json-schema": "^7.0.1",
     "semantic-release": "^15.13.3"
   },
   "repository": {

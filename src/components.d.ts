@@ -8,62 +8,55 @@
 import '@stencil/core';
 
 
+import {
+  JSONSchema7,
+} from 'json-schema';
 
 
 export namespace Components {
 
-  interface MyComponent {
+  interface AdcFormsJsonSchema {
+    'action': string;
+    'cssClass': string;
     /**
-    * The first name
+    * The JSON Schema to build the form and apply validation
     */
-    'first': string;
-    /**
-    * The last name
-    */
-    'last': string;
-    /**
-    * The middle name
-    */
-    'middle': string;
+    'schema': JSONSchema7;
+    'submit': string;
   }
-  interface MyComponentAttributes extends StencilHTMLAttributes {
+  interface AdcFormsJsonSchemaAttributes extends StencilHTMLAttributes {
+    'action'?: string;
+    'cssClass'?: string;
     /**
-    * The first name
+    * The JSON Schema to build the form and apply validation
     */
-    'first'?: string;
-    /**
-    * The last name
-    */
-    'last'?: string;
-    /**
-    * The middle name
-    */
-    'middle'?: string;
+    'schema'?: JSONSchema7;
+    'submit'?: string;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
-    'MyComponent': Components.MyComponent;
+    'AdcFormsJsonSchema': Components.AdcFormsJsonSchema;
   }
 
   interface StencilIntrinsicElements {
-    'my-component': Components.MyComponentAttributes;
+    'adc-forms-json-schema': Components.AdcFormsJsonSchemaAttributes;
   }
 
 
-  interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {}
-  var HTMLMyComponentElement: {
-    prototype: HTMLMyComponentElement;
-    new (): HTMLMyComponentElement;
+  interface HTMLAdcFormsJsonSchemaElement extends Components.AdcFormsJsonSchema, HTMLStencilElement {}
+  var HTMLAdcFormsJsonSchemaElement: {
+    prototype: HTMLAdcFormsJsonSchemaElement;
+    new (): HTMLAdcFormsJsonSchemaElement;
   };
 
   interface HTMLElementTagNameMap {
-    'my-component': HTMLMyComponentElement
+    'adc-forms-json-schema': HTMLAdcFormsJsonSchemaElement
   }
 
   interface ElementTagNameMap {
-    'my-component': HTMLMyComponentElement;
+    'adc-forms-json-schema': HTMLAdcFormsJsonSchemaElement;
   }
 
 

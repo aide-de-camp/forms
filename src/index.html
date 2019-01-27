@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>Stencil Component Starter</title>
-  <script src="/build/mycomponent.js"></script>
-
-</head>
-<body>
-
-  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
-
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"
+    />
+    <title>Stencil Component Starter</title>
+    <script src="/build/adc-forms.js"></script>
+  </head>
+  <body>
+    <adc-forms-json-schema
+      css-class="my-form"
+      submit="Go!"
+      action="/my-handling-form-page"
+    ></adc-forms-json-schema>
+    <script>
+      const jsonSchemaBuilder = document.querySelector('adc-forms-json-schema');
+      jsonSchemaBuilder.schema = {
+        type: 'object',
+        required: ['firstName', 'lastName'],
+        properties: {
+          firstName: {
+            type: 'string',
+          },
+          lastName: {
+            type: 'string',
+          },
+          age: {
+            type: 'number',
+            minimum: 18,
+            maximum: 99,
+          },
+          name: { type: 'string', minLength: 5, maxLength: 12 },
+          email: { type: 'string', format: 'email' },
+          phone: { type: 'string', pattern: '^[0-9()\\-\\.\\s]+$' },
+        },
+      };
+    </script>
+  </body>
 </html>
