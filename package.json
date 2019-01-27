@@ -1,7 +1,21 @@
 {
-  "name": "forms",
-  "version": "0.0.1",
+  "name": "@adc/forms",
+  "version": "0.0.0-development",
   "description": "Stencil Component Starter",
+  "keywords": [
+    "stencil",
+    "stencil-components",
+    "jsx",
+    "html",
+    "web-components",
+    "form-builder",
+    "json-schema",
+    "form",
+    "forms"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
   "unpkg": "dist/ionic.js",
@@ -14,11 +28,21 @@
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test:watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {},
   "devDependencies": {
-    "@stencil/core": "~0.16.2"
+    "@stencil/core": "~0.16.2",
+    "semantic-release": "^15.13.3"
   },
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aide-de-camp/forms.git"
+  },
+  "author": "David Guijarro <guijarro.dav@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aide-de-camp/forms/issues"
+  },
+  "homepage": "https://github.com/aide-de-camp/forms"
 }
